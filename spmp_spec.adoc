@@ -6,7 +6,7 @@ The SPMP is also applied to data accesses in M-mode when the MPRV bit in mstatus
 
 Like PMP, the granularity of SPMP access control settings is platform-specific and, within a platform, may vary by physical memory region. However, the standard SPMP encoding should support regions as small as four bytes. 
 
-SPMP checks can happen in parallel with PMA and PMP.
+The implementation can perform SPMP checks in parallel with PMA and PMP.
 The SPMP exception reports have higher priority than PMP or PMA exceptions (e.g., an SPMP exception will be raised if the access violates both SPMP and PMP).
 
 SPMP checks will be applied to all accesses for U mode and S mode, depending on the values in the configuration registers.
